@@ -9,7 +9,8 @@ def check_link(link):
         create_folder.write(f'{link}\n')
     else:
         print(f"{link} bad")
-
+        create_folder = open("result_bad.txt", "a") #file result
+        create_folder.write(f'{link}\n')
 def check_links(list):
     with open(list, 'r') as file:
         links = file.read().splitlines()
